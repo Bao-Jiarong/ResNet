@@ -31,7 +31,7 @@ Images are taken from [source](https://arxiv.org/pdf/1512.03385.pdf)
 #### Training on MNIST
 <p></p>
 <center>  
-<img src="img/mnist.png" width="500" height="300"/>
+<img src="img/mnist.png" width="400" height="350"/>
 </center>   
 
 #### Requirement
