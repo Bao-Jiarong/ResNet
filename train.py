@@ -1,8 +1,8 @@
 '''
   Author       : Bao Jiarong
-  Creation Date: 2020-07-07
+  Creation Date: 2020-07-08
   email        : bao.salirong@gmail.com
-  Task         : ResNet Implementation
+  Task         : ResNet18, ResNet34, ResNet50, ResNet101, ResNet152 Implementation
   Dataset      : MNIST Digits (0,1,...,9)
 '''
 
@@ -13,11 +13,7 @@ import numpy as np
 import tensorflow as tf
 import cv2
 import loader
-import resnet18
-import resnet34
-import resnet50
-import resnet101
-import resnet152
+import resnet
 
 np.random.seed(7)
 tf.random.set_seed(7)
@@ -29,7 +25,7 @@ height     = 224 >> 2
 channel    = 3
 n_outputs  = 10
 net_names = ["resnet18","resnet34","resnet50","resnet101","resnet152"]
-model_name = "models/"+net_names[3]+"/digists"
+model_name = "models/"+net_names[-1]+"/digists"
 data_path  = "../data_img/MNIST/train/"
 
 # Step 0: Global Parameters
@@ -38,7 +34,11 @@ lr_rate    = 0.0001
 batch_size = 32
 
 # Step 1: Create Model
-model = resnet101.ResNet101((None, height, width, channel),  classes = n_outputs, filters = 6)
+# model = resnet.ResNet18((None, height, width, channel),  classes = n_outputs, filters = 6)
+# model = resnet.ResNet34((None, height, width, channel),  classes = n_outputs, filters = 6)
+# model = resnet.ResNet50((None, height, width, channel),  classes = n_outputs, filters = 6)
+# model = resnet.ResNet101((None, height, width, channel),  classes = n_outputs, filters = 6)
+model = resnet.ResNet152((None, height, width, channel),  classes = n_outputs, filters = 6)
 
 # Step 2: Define Metrics
 print(model.summary())
