@@ -8,7 +8,7 @@ In case we have very huge dataset, I applied online loading (by batch) instead o
 ####  Architectures for ResNet
 <p></p>
 <center>  
-<img src="img/2.png" align="center" width="600" height="1000"/>
+<img src="img/2.png" align="center" width="500" height="1000"/>
 <p></p>
 Figure 1. Example network architectures for ImageNet. Left: the
 VGG-19 model . Middle: a plain network with 34 parameter layers .
@@ -16,7 +16,7 @@ Right: a residual network with 34 parameter layers.
 </center>  
 <p></p>
 <center>   
-<img src="img/3.png" width="600" height="400"/>   
+<img src="img/3.png" width="800" height="400"/>   
 <p></p>
 Table 1. Architectures for ImageNet. Building blocks are shown in brackets (see also Fig. 5), with the numbers of blocks stacked. Downsampling is performed by conv3 1, conv4 1, and conv5 1 with a stride of 2.   
 </center>
